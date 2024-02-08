@@ -1,10 +1,10 @@
-Take a look at the `Dockerfile`.
+Please familiarize yourself with the `Dockerfile`.
+
 You can put any .war file to `./target` or `./docker` folder and it will be used by Tomcat. 
 
 To build a docker image:
 ```sh
 docker build -t mywebapp .
-mkdir tomcat_volume
 ```
 
 You can use `tomcat_volume` folder to pass files to and from tomcat.  
@@ -19,7 +19,9 @@ You can now access the app:
 http://localhost:8080/ISIA_servicios_web_new/serviciosweb?wsdl
 
 You can upload war files without rebuilding and restarting the image/container using this link: 
-http://localhost:8080/manager/html/.
+http://localhost:8080/manager/html/. Use credentials from `docker/tomcat-users.xml`
+
+You can also use Remote debug on port `:5005`.
 
 # To create a client model
 
