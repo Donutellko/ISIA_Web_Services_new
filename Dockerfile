@@ -1,8 +1,5 @@
 FROM tomcat:9.0.8-jre8-alpine
 
-# LABEL maintainer=”deepak@softwareyoga.com”
-
-# ADD ISIA_servicios_web.war /usr/local/tomcat/webapps/
 ADD docker/*.war /usr/local/tomcat/webapps/
 ADD target/*.war /usr/local/tomcat/webapps/
 ADD docker/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
