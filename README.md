@@ -2,6 +2,12 @@ Please familiarize yourself with the `Dockerfile`.
 
 You can put any .war file to `./target` or `./docker` folder and it will be used by Tomcat. 
 
+To build the project and generate a `./target/*.war` file.
+Do it before building an image or before deploying the file manually using the Tomcat Manager (link below):
+```shell
+mvn clean package
+```
+
 To build a docker image:
 ```sh
 docker build -t mywebapp .
