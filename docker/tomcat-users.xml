@@ -20,11 +20,11 @@
               xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
               version="1.0">
     <!-- It is recommended to never grant the manager-script or manager-jmx roles to users that have the manager-gui role.-->
-    <role rolename="manager-gui"/>
-    <user username="TomcatManager" password="secpa55wd" roles="manager-gui"/>
 
     <role rolename="admin-gui"/>
-    <user username="TomcatAdmin" password="secpa55wd" roles="admin-gui"/>
+    <role rolename="manager-gui"/>
+    <user username="TomcatManager" password="secpa55wd" roles="manager-gui,admin-gui"/>
+    <user username="TomcatAdmin" password="secpa55wd" roles="manager-gui,admin-gui"/>
 
     <role rolename="manager-script"/>
     <user username="TomcatScript" password="secpa55wd" roles="manager-script"/>
